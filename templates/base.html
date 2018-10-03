@@ -1,0 +1,121 @@
+{% load static %}
+{% load font_awesome %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% fa_css %}
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #b04632">
+      <a class="navbar-brand" href="{% url 'index' %}">@DashCase</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse mr-auto" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          {% if status_ativo == home %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'modelos' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Modelos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #933120">
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'vendas' %}">{% fa 'fa-money' %}  Vendas</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'compras' %}">{% fa 'fa-shopping-cart' %}  Compras</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'financeiro' %}">{% fa 'fa-bar-chart' %}  Financeiro</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'logistica' %}">{% fa 'fa-cubes' %}  Logística</a>
+                  <hr>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'outras_areas' %}">{% fa 'fa-th-large' %}  Outras Áreas</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cadastro_cliente' %}">Clientes</a>
+              </li>
+          {% elif status_ativo == "modelos" or status_ativo == "vendas" or status_ativo == "compras" or status_ativo == "financeiro" or status_ativo == "logistica" or status_ativo == "outras_areas"%}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'modelos' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Modelos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #933120">
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'vendas' %}">{% fa 'fa-money' %}  Vendas</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'compras' %}">{% fa 'fa-shopping-cart' %}  Compras</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'financeiro' %}">{% fa 'fa-bar-chart' %}  Financeiro</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'logistica' %}">{% fa 'fa-cubes' %}  Logística</a>
+                  <hr>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'outras_areas' %}">{% fa 'fa-th-large' %}  Outras Áreas</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'cadastro_cliente' %}">Clientes</a>
+              </li>
+          {% elif status_ativo == "clientes" %}
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'index' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="{% url 'modelos' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Modelos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #933120">
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'vendas' %}">{% fa 'fa-money' %}  Vendas</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'compras' %}">{% fa 'fa-shopping-cart' %}  Compras</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'financeiro' %}">{% fa 'fa-bar-chart' %}  Financeiro</a>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'logistica' %}">{% fa 'fa-cubes' %}  Logística</a>
+                  <hr>
+                  <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'outras_areas' %}">{% fa 'fa-th-large' %}  Outras Áreas</a>
+                </div>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'cadastro_cliente' %}">Clientes</a>
+              </li>
+           {% endif %}
+        </ul>
+      </div>
+     <div>
+        <ul class="navbar-nav">
+          <!--<li>-->
+            <!--<a class="nav-link" href="#">-->
+              <!--<span >{% fa 'fa-gears' %}</span>-->
+            <!--</a>-->
+          <!--</li>-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="{% url 'login' %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span>{% fa 'fa-user-circle' %}</span>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #933120">
+              <a class="dropdown-item" style="color: #ebd1cc;" href="#">{% fa 'fa-vcard' %}  Perfil</a>
+              <a class="dropdown-item" style="color: #ebd1cc;" href="#">{% fa 'fa-vcard-o' %}  Dados Pessoais</a>
+              <a class="dropdown-item" style="color: #ebd1cc;" href="#">{% fa 'fa-gears' %}  Configurações</a>
+              <hr>
+              <!--<a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'login' %}">{% fa 'fa-share-square' %}  Login</a>-->
+              <a class="dropdown-item" style="color: #ebd1cc;" href="{% url 'logout' %}">{% fa 'fa-minus-circle' %}  Logout</a>
+            </div>
+          </li>
+          <li>
+            <a class="nav-link" href="#">
+              <span >Usuário: {{ user.username }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block main %}
+    {% endblock %}
+    <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>

@@ -14,8 +14,25 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+# from rest_framework import routers
+from django.urls import path, include
+from django.contrib.auth.views import LoginView, LogoutView
+from django.conf import settings
+from django.conf.urls.static import static
 
+# from api.api import DadosPerfilViewSet
+
+# router = routers.DefaultRouter(trailing_slash=False)
+# router.register(r'perfis', DadosPerfilViewSet)
 urlpatterns = [
+    path('', include('home.urls')),
+    path('home/', include('home.urls')),
+    path('clientes/', include('clientes.urls')),
+    path('usuarios/', include('usuarios.urls')),
+    path('modelos/', include('modelos.urls')),
+    path('login/', LoginView.as_view(), name="login"),
+    path('logout/', LogoutView.as_view(), name="logout"),
     path('admin/', admin.site.urls),
-]
+    # path('api/', include(router.urls)),
+    # path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
