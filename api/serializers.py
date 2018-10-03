@@ -10,12 +10,12 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class DadosPerfilSerializer(serializers.ModelSerializer):
-    # usuario = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
+    usuario = serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
     # usuario = serializers.StringRelatedField()
-    usuario = UserSerializer(read_only=True)
-    user_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), write_only=True, source='user')
+    #usuario = UserSerializer(read_only=True)
+    #ser_id = serializers.PrimaryKeyRelatedField(queryset=User.objects.all(), write_only=True, source='user')
     class Meta:
         model = DadosPerfil
         # fields = '__all__'
-        fields = ('id', 'nome', 'email', 'nome_fantasia', 'website', 'descricao', 'usuario', 'user_id')
+        fields = ('id', 'nome', 'email', 'nome_fantasia', 'website', 'descricao', 'usuario')
 
