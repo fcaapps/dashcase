@@ -3,4 +3,150 @@
 {% load font_awesome %}
 {% block title %}{% endblock %}
 {% block main %}
+    <!--Áreas de Negócio-->
+    <!--<div class="container home">-->
+        <!--<div class="row">-->
+            <!--<div class="col" style="border-style: solid; border-with: 2px;">-->
+                <!--<div class="col cards-modelo">-->
+                 <!--<div class="card" style="width: 14rem;">-->
+                  <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/vendas.png' %}" alt="Vendas">-->
+                  <!--<div class="card-body">-->
+                    <!--<p class="card-text">Padrões de relatório gerencial de vendas.</p>-->
+                  <!--</div>-->
+                  <!--<a href="{% url 'vendas' %}" type="button" class="btn btn-secondary" role="button">Vendas</a>-->
+                 <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col" style="border-style: solid; border-with: 2px;">-->
+                <!--<div class="col cards-modelo">-->
+                    <!--<div class="card" style="width: 14rem;">-->
+                      <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/compras.jpg' %}" alt="Compras">-->
+                      <!--<div class="card-body">-->
+                        <!--<p class="card-text">Padrões de relatório gerencial de compras.</p>-->
+                      <!--</div>-->
+                      <!--<a href="{% url 'compras' %}" type="button" class="btn btn-secondary" role="button">Compras</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col" style="border-style: solid; border-with: 2px;">-->
+                <!--<div class="col cards-modelo">-->
+                    <!--<div class="card" style="width: 14rem;">-->
+                      <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/financeiro.png' %}" alt="Financeiro">-->
+                      <!--<div class="card-body">-->
+                        <!--<p class="card-text">Padrões de relatório gerencial financeiro.</p>-->
+                      <!--</div>-->
+                      <!--<a href="{% url 'financeiro' %}" type="button" class="btn btn-secondary" role="button">Financeiro</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col" style="border-style: solid; border-with: 2px;">-->
+                <!--<div class="col">-->
+                    <!--<div class="card" style="width: 14rem;">-->
+                      <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/logistica.png' %}" alt="Logística">-->
+                      <!--<div class="card-body">-->
+                        <!--<p class="card-text">Padrões de relatório gerencial de logística.</p>-->
+                      <!--</div>-->
+                      <!--<a href="{% url 'logistica' %}" type="button" class="btn btn-secondary" role="button">Logística</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col" style="border-style: solid; border-with: 2px;">-->
+                <!--<div class="card" style="width: 14rem;">-->
+                  <!--<img class="card-img-top" src="{% static 'img/outros.png' %}" alt="Outras Áreas">-->
+                  <!--<div class="card-body">-->
+                    <!--<p class="card-text">Padrões de relatório demais áreas.</p>-->
+                  <!--</div>-->
+                  <!--<a href="{% url 'outras_areas' %}" type="button" class="btn btn-secondary" role="button">Outras Áreas</a>-->
+                <!--</div>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="container">
+        <div class="row" style="margin-top: 1.5%;">
+
+            <div class="col-4">
+
+                <div class="row">
+
+                    <div class="col cards-modelo">
+                         <div class="card">
+                          <img class="card-img-top" height="150px" src="{% static 'img/vendas.png' %}" alt="Vendas">
+                          <div class="card-body">
+                            <p class="card-text">Padrões de relatório gerencial de vendas.</p>
+                          </div>
+                          <a href="{% url 'vendas' %}" type="button" class="btn btn-secondary" role="button">Vendas</a>
+                         </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col cards-modelo">
+                        <div class="card">
+                          <img class="card-img-top" height="150px" src="{% static 'img/financeiro.png' %}" alt="Financeiro">
+                          <div class="card-body">
+                            <p class="card-text">Padrões de relatório gerencial financeiro.</p>
+                          </div>
+                          <a href="{% url 'financeiro' %}" type="button" class="btn btn-secondary" role="button">Financeiro</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-4 cards-modelo">
+
+                <div class="card">
+                  <img class="card-img-top" height="150px" src="{% static 'img/outros.png' %}" alt="Outras Áreas">
+                  <div class="card-body">
+                    <p class="card-text">Padrões de relatório demais áreas.</p>
+                  </div>
+                  <a href="{% url 'outras_areas' %}" type="button" class="btn btn-secondary" role="button">Outras Áreas</a>
+                </div>
+
+            </div>
+
+            <div class="col-4">
+
+                 <div class="row">
+
+                    <div class="col cards-modelo">
+                        <div class="card">
+                          <img class="card-img-top" height="150px" src="{% static 'img/compras.jpg' %}" alt="Compras">
+                          <div class="card-body">
+                            <p class="card-text">Padrões de relatório gerencial de compras.</p>
+                          </div>
+                          <a href="{% url 'compras' %}" type="button" class="btn btn-secondary" role="button">Compras</a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col cards-modelo">
+                        <div class="card">
+                          <img class="card-img-top" height="150px" src="{% static 'img/logistica.png' %}" alt="Logística">
+                          <div class="card-body">
+                            <p class="card-text">Padrões de relatório gerencial de logística.</p>
+                          </div>
+                          <a href="{% url 'logistica' %}" type="button" class="btn btn-secondary" role="button">Logística</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
 {% endblock %}

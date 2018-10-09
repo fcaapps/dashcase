@@ -7,9 +7,18 @@
     align-items: center
 }
 
+.container-centralizado {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+
 .cursor-imagem {
     cursor: pointer;
 }
+
+
 .cards-apresentacao {
     width: 100vw;
     height: 75vh;
@@ -19,6 +28,13 @@
     align-items: center
 }
 
+.cards-modelo {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .background-menu {
     background-color: #10282f;
 }

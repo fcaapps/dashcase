@@ -5,69 +5,22 @@
 {% block main %}
         <!--Boas vindas    -->
         <div class="container-fluid">
-            <div class="jumbotron" style="margin-top: 20px; padding: 15px;">
+            <div class="jumbotron" style="margin: 20px;">
               <h1 class="display-4" style="padding: 10px;"><strong>@DashCase</strong></h1>
               <p class="lead">Sistema Online de Informação Gerencial - Dashboards e Relatórios</p>
               <hr class="my-4">
-              Cada dia que seu negócio cresce você se vê na difícil missão de organizar as informações para melhor
+              <p>Cada dia que seu negócio cresce você se vê na difícil missão de organizar as informações para melhor
                  <strong>tomada de decisão.</strong> Por isso, resolvemos reunir num só lugar de maneira rápida e prática tudo o que precisa
                  para saber como anda a sua empresa. <strong>@DashCase</strong> reúne alguns templates e modelos de relatórios com alto impacto
                  de informação agrupados e condensados para uma melhor visualização de todo os seus dados. Nos preocupamos em fornecer
                  a lógica necessária ao reunir as informações seguindo os padrões e regras de cada área de negócio: <strong>Vendas, Compras, Financeiro,
-                 Logística</strong> e muito mais. Confira abaixo nossos modelos:
+                 Logística</strong> e muito mais. Caso precise de mais informações para sua seleta tomada de decisão nos dispomos a criar modelos
+                 que corresponda mais a realidade que espera enxergar em seu negócio.
+              </p>
+              <hr class="my-4">
+              <!--<a href="{% url 'vendas' %}" type="button" class="btn btn-secondary" role="button">Veja </a>-->
+              <a class="btn btn-secondary btn-lg" href="{% url 'modelos' %}" role="button">>> Modelos Disponíveis</a>
             </div>
         </div>
-        <hr class="my-4">
-        <!--Áreas de Negócio-->
-        <div class="container-fluid">
-            <div class="jumbotron" style="display: flex; justify-content: center; margin-bottom: 80px; padding: 30px;">
-                  <div class="row">
-                    <div class="col-sm">
-                      <div class="card" style="width: 14rem;">
-                          <img class="card-img-top" width="224" height="101" src="{% static 'img/vendas.png' %}" alt="Card image cap">
-                          <div class="card-body">
-                            <p class="card-text">Padrões de relatório gerencial de vendas.</p>
-                          </div>
-                          <a href="{% url 'vendas' %}" type="button" class="btn btn-secondary" role="button">Vendas</a>
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="card" style="width: 14rem;">
-                          <img class="card-img-top" width="224" height="101" src="{% static 'img/compras.jpg' %}" alt="Card image cap">
-                          <div class="card-body">
-                            <p class="card-text">Padrões de relatório gerencial de compras.</p>
-                          </div>
-                          <a href="{% url 'compras' %}" type="button" class="btn btn-secondary" role="button">Compras</a>
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="card" style="width: 14rem;">
-                          <img class="card-img-top" width="224" height="101" src="{% static 'img/financeiro.png' %}" alt="Card image cap">
-                          <div class="card-body">
-                            <p class="card-text">Padrões de relatório gerencial financeiro.</p>
-                          </div>
-                          <a href="{% url 'financeiro' %}" type="button" class="btn btn-secondary" role="button">Financeiro</a>
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="card" style="width: 14rem;">
-                          <img class="card-img-top" width="224" height="101" src="{% static 'img/logistica.png' %}" alt="Card image cap">
-                          <div class="card-body">
-                            <p class="card-text">Padrões de relatório gerencial de logística.</p>
-                          </div>
-                          <a href="{% url 'logistica' %}" type="button" class="btn btn-secondary" role="button">Logística</a>
-                      </div>
-                    </div>
-                    <div class="col-sm">
-                      <div class="card" style="width: 14rem;">
-                          <img class="card-img-top" width="224" height="101" src="{% static 'img/outros.png' %}" alt="Card image cap">
-                          <div class="card-body">
-                            <p class="card-text">Padrões de relatório demais áreas.</p>
-                          </div>
-                          <a href="{% url 'outras_areas' %}" type="button" class="btn btn-secondary" role="button">Outras Áreas</a>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-        </div>
+
 {% endblock %}
