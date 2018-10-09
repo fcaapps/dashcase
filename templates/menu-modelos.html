@@ -1,0 +1,10 @@
+{% block menu-model %}
+    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #10282f;">
+        <a class="dropdown-item" style="color: #707070;" href="{% url 'vendas' %}">{% fa 'fa-money' %}  Vendas</a>
+        <a class="dropdown-item" style="color: #707070;" href="{% url 'compras' %}">{% fa 'fa-shopping-cart' %}  Compras</a>
+        <a class="dropdown-item" style="color: #707070;" href="{% url 'financeiro' %}">{% fa 'fa-bar-chart' %}  Financeiro</a>
+        <a class="dropdown-item" style="color: #707070;" href="{% url 'logistica' %}">{% fa 'fa-cubes' %}  Logística</a>
+        <hr>
+        <a class="dropdown-item" style="color: #707070;" href="{% url 'outras_areas' %}">{% fa 'fa-th-large' %}  Outras Áreas</a>
+    </div>
+{% endblock %}

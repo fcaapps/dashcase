@@ -1,10 +1,61 @@
 .home {
     width: 100vw;
-    height: 100vh;
+    height: 84vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center
+}
+
+.cursor-imagem {
+    cursor: pointer;
+}
+.cards-apresentacao {
+    width: 100vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.background-menu {
+    background-color: #10282f;
+}
+.nav-barra-lista-rel {
+    background-color: #205060;
+}
+
+.background-header {
+    background-color: #081418;
+    color: #707070;
+}
+
+.background-footer {
+    background-color: #081418;
+    color: #707070;
+}
+
+.cor-botao-home {
+    background-color: #505050;
+    color: #ffffff;
+    margin: 0.5px;
+}
+
+.background-corpo {
+    background-color: #707070;
+    color: #000000;
+}
+
+.background-jumb {
+    background-color: #4d4d4d;
+}
+
+.footer-page {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
 }
 
 .navbar-cor-customer {

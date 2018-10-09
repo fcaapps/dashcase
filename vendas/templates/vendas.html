@@ -3,10 +3,84 @@
 {% load font_awesome %}
 {% block title %}{% endblock %}
 {% block main %}
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img style="border-radius: 8px;" src="{% static 'img/v-venda.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
-    <strong style="color: #5a6268">Vendas</strong>
-  </a>
-</nav>
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img style="border-radius: 8px;" src="{% static 'img/v-venda.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+      <strong style="color: #5a6268">Vendas</strong>
+    </a>
+  </nav>
+
+  <div class="container-fluid cards-apresentacao">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card" style="width: 14rem; border-style: solid; border-width: 5px;">
+            <img class="card-img-top cursor-imagem" src="{% static 'img/analise_vendas.png' %}" alt="Análise de Vendas" data-toggle="modal" data-target="#myModal">
+            <!--<div class="card-body">-->
+              <!--<p class="card-text">Padrões de relatório gerencial de vendas.</p>-->
+            <!--</div>-->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Análise Vendas</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <img class="card-img-top cursor-imagem" src="{% static 'img/analise_vendas.png' %}" alt="Análise de Vendas" data-toggle="modal" data-target="#myModal">
+                  </div>
+
+                  <!--&lt;!&ndash; Modal footer &ndash;&gt;-->
+                  <!--<div class="modal-footer">-->
+                    <!--<button type="button" class="btn btn-danger" data-dismiss="modal">Fechar</button>-->
+                  <!--</div>-->
+
+                </div>
+              </div>
+            </div>
+            <a href="{% url 'analise_vendas' %}" type="button" class="btn btn-secondary" role="button">Análise Vendas</a>
+        </div>
+      </div>
+      <!--<div class="col-sm">-->
+        <!--<div class="card" style="width: 14rem;">-->
+            <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/compras.jpg' %}" alt="Card image cap">-->
+            <!--<div class="card-body">-->
+              <!--<p class="card-text">Padrões de relatório gerencial de compras.</p>-->
+            <!--</div>-->
+            <!--<a href="{% url 'compras' %}" type="button" class="btn btn-secondary" role="button">Compras</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm">-->
+        <!--<div class="card" style="width: 14rem;">-->
+            <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/financeiro.png' %}" alt="Card image cap">-->
+            <!--<div class="card-body">-->
+              <!--<p class="card-text">Padrões de relatório gerencial financeiro.</p>-->
+            <!--</div>-->
+            <!--<a href="{% url 'financeiro' %}" type="button" class="btn btn-secondary" role="button">Financeiro</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm">-->
+        <!--<div class="card" style="width: 14rem;">-->
+            <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/logistica.png' %}" alt="Card image cap">-->
+            <!--<div class="card-body">-->
+              <!--<p class="card-text">Padrões de relatório gerencial de logística.</p>-->
+            <!--</div>-->
+            <!--<a href="{% url 'logistica' %}" type="button" class="btn btn-secondary" role="button">Logística</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="col-sm">-->
+        <!--<div class="card" style="width: 14rem;">-->
+            <!--<img class="card-img-top" width="224" height="101" src="{% static 'img/outros.png' %}" alt="Card image cap">-->
+            <!--<div class="card-body">-->
+              <!--<p class="card-text">Padrões de relatório demais áreas.</p>-->
+            <!--</div>-->
+            <!--<a href="{% url 'outras_areas' %}" type="button" class="btn btn-secondary" role="button">Outras Áreas</a>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
 {% endblock %}
+
