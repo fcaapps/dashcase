@@ -5,7 +5,7 @@ from django.shortcuts import redirect, reverse
 @login_required
 def modelos(request):
     user = request.user
-    if user.has_perm('clientes.modelos_permissoes'):
+    if user.has_perm('modelos.modelos_permissoes'):
         return render(request, 'modelos.html', {'status_ativo': 'modelos'})
     else:
         return redirect(reverse('acesso_negado'))

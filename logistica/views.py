@@ -5,7 +5,7 @@ from django.shortcuts import redirect, reverse
 @login_required
 def logistica(request):
     user = request.user
-    if user.has_perm('clientes.logistica_permissoes'):
+    if user.has_perm('logistica.logistica_permissoes'):
         return render(request, 'logistica.html', {'status_ativo': 'logistica'})
     else:
         return redirect(reverse('acesso_negado'))

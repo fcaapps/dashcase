@@ -70,7 +70,7 @@ class EmbedToken:
 @login_required
 def vendas(request):
     user = request.user
-    if user.has_perm('clientes.vendas_permissoes'):
+    if user.has_perm('vendas.vendas_permissoes'):
         return render(request, 'vendas.html', {'status_ativo': 'vendas'})
     else:
         return redirect(reverse('acesso_negado'))

@@ -5,7 +5,7 @@ from django.shortcuts import redirect, reverse
 @login_required
 def compras(request):
     user = request.user
-    if user.has_perm('clientes.compras_permissoes'):
+    if user.has_perm('compras.compras_permissoes'):
         return render(request, 'compras.html', {'status_ativo': 'compras'})
     else:
         return redirect(reverse('acesso_negado'))
