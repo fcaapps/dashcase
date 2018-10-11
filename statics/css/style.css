@@ -4,11 +4,36 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center
+    align-items: center;
+}
+
+.acesso-negado-cadeado {
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.acesso-negado {
+    width: 30vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
 }
 
 .container-centralizado {
     width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.linha-centralizada {
+    width: 50vw;
     display: flex;
     justify-content: center;
 }
@@ -30,6 +55,14 @@
 
 .cards-modelo {
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-modal {
+    width: 55vw;
     display: flex;
     flex-direction: row;
     justify-content: center;

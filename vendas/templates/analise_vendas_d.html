@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="reportContainer" style="height: 800px;">
+    <script src="{% static 'bower_components/powerbi-client/dist/powerbi.js' %}"></script>
+         <script type="text/javascript">
+            var models = window['powerbi-client'].models;
+
+            var embedConfiguration = {
+                type: 'dashboard',
+                id: '{{ selectedReport }}',
+                embedUrl: 'https://app.powerbi.com/dashboardEmbed',
+                tokenType: models.TokenType.Embed,
+                accessToken: '{{ embedToken }}',
+                permissions: models.Permissions.All,
+                settings: {
+                    filterPaneEnabled: true,
+                    navContentPaneEnabled: true
+                }
+            };
+
+            var element = document.getElementById('reportContainer');
+            element.style.color = "transparent"
+            element.border = "0"
+            element.style.margin = "0px"
+            var report = powerbi.embed(element, embedConfiguration);
+
+        </script>
+
+
+
+</div>
+</body>
+</html>

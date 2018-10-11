@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load font_awesome %}
+{% block title %}{% endblock %}
+{% block main %}
+    <div class="container home">
+        <div class="jumbotron" style="margin: 0px; padding-top: 25px; padding-bottom: 25px; padding-left: 0px; padding-right: 0px;">
+            <div class="row linha-centralizada">
+                <img height="180px" src="{% static 'img/acesso_negado.png' %}" alt="Acesso Negado">
+            </div>
+            <div class="row linha-centralizada">
+                <p style="margin: 10px; color: #b04632; font-size: 50px; font-weight: bold">Acesso Negado</p>
+            </div>
+            <hr>
+            <div class="row linha-centralizada">
+                <p style="margin: 0px; font-size: 20px; font-weight: bold">Você não tem permissão para acessar este conteúdo.</p>
+            </div>
+        </div>
+
+
+        <!--<div class="jumbotron" style="margin: 30px;">-->
+          <!--<div class="row">-->
+              <!--<div class="col">-->
+                <!--<img height="150px" src="{% static 'img/acesso_negado.png' %}" alt="Acesso Negado">-->
+                <!--<strong style="color: #b04632; margin: 30px; font-size: 50px; font-weight: bold" class="lead">-->
+                    <!--Acesso Negado-->
+                <!--</strong>-->
+              <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+    </div>
+{% endblock %}

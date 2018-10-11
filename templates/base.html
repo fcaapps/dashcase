@@ -82,6 +82,44 @@
                 <a class="nav-link" href="{% url 'cadastro_cliente' %}">Clientes</a>
               </li>
            {% endif %}
+
+              {% if status_ativo == "vendas" %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> {% fa 'fa-arrow-right' %} </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'vendas' %}">{% fa 'fa-money' %} Vendas</a>
+                  </li>
+              {% elif status_ativo == "compras" %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> {% fa 'fa-arrow-right' %} </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'vendas' %}">{% fa 'fa-shopping-cart' %} Compras</a>
+                  </li>
+              {% elif status_ativo == "financeiro" %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> {% fa 'fa-arrow-right' %} </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'vendas' %}">{% fa 'fa-bar-chart' %} Financeiro</a>
+                  </li>
+              {% elif status_ativo == "logistica" %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> {% fa 'fa-arrow-right' %} </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'vendas' %}">{% fa 'fa-cubes' %} Logística</a>
+                  </li>
+              {% elif status_ativo == "outras_areas" %}
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#"> {% fa 'fa-arrow-right' %} </a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'vendas' %}">{% fa 'fa-th-large' %} Outras Áreas</a>
+                  </li>
+              {% endif %}
+
         </ul>
       </div>
      <div>
